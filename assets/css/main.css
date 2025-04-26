@@ -1,126 +1,99 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
-@import url("fontawesome-all.min.css");
-
-/* Reset de Estilos */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+/* Reset básico para garantir consistência entre os navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
-    line-height: 1.65;
-    font-family: "Open Sans", Helvetica, sans-serif;
-    color: #fff;
-    background: #2e3842;
-    font-size: 15pt;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-/* Cabeçalhos */
-h1, h2, h3, h4, h5, h6 {
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: 0.225em;
-    margin: 0 0 1em 0;
-    text-transform: uppercase;
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: dotted 1px;
-    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+/* Layout de Grid Responsivo */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-a:hover {
-    border-bottom-color: transparent;
+.col {
+  flex: 1 1 250px; /* flex-grow, flex-shrink, flex-basis */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-/* Estilos de Blocos */
-blockquote {
-    border-left: solid 4px #fff;
-    font-style: italic;
-    margin: 0 0 2em 0;
-    padding: 0.5em 0 0.5em 2em;
+/* Exemplo de botões */
+.btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Adicionando novos blocos de conteúdo */
-.new-section {
-    background-color: #333;
-    padding: 20px;
-    margin-top: 2rem;
-    border-radius: 8px;
+.btn:hover {
+  background-color: #0056b3;
 }
 
-.new-title {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+/* Ajustes Responsivos */
+@media (max-width: 1200px) {
+  .container {
+    padding: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
 }
 
-/* Estilo para botões novos */
-button.new-button {
-    background-color: #1e72f3;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
 
-button.new-button:hover {
-    background-color: #155a99;
-}
+  .col {
+    min-width: 100%;
+    flex: 1 1 100%; /* Garante que as colunas ocupem toda a largura */
+  }
 
-/* Imagens */
-.new-image {
+  .btn {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    padding: 15px;
+  }
 }
 
-/* Responsividade para dispositivos móveis */
-@media screen and (max-width: 1680px) {
-    body {
-        font-size: 13pt;
-    }
-}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 15px;
+  }
 
-@media screen and (max-width: 1280px) {
-    body {
-        font-size: 12pt;
-    }
-}
+  .container {
+    padding: 10px;
+  }
 
-@media screen and (max-width: 736px) {
-    body {
-        font-size: 11pt;
-        letter-spacing: 0.0375em;
-    }
-    
-    .new-section {
-        padding: 15px;
-        margin-top: 1rem;
-    }
+  h1 {
+    font-size: 22px;
+  }
 
-    .new-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .new-button {
-        padding: 8px 15px;
-    }
+  .btn {
+    font-size: 16px;
+  }
 }
