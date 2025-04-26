@@ -92,6 +92,25 @@ body {
   h1 {
     font-size: 22px;
   }
+/* === OVERRIDES PERSONALIZADOS DO GRÊMIO === */
+/* Exemplo de botão */
+.btn.primary {
+  background-color: #6a0dad !important;
+  color: #fff !important;
+}
+
+/* Espaçamento e layout das sections */
+.wrapper.style1.special {
+  padding: 4rem 2rem;
+  background: #f8f8ff;
+}
+
+/* Responsividade adicional */
+@media screen and (max-width: 736px) {
+  .wrapper.style1.special {
+    padding: 2rem 1rem;
+  }
+}
 
   .btn {
     font-size: 16px;
