@@ -1,0 +1,12 @@
+/* === OVERRIDES GRÊMIO === */
+/* Exemplo: muda fundo da sua seção principal */
+.wrapper.style1.special {
+  background: #f8f8ff !important;
+  padding: 3rem 2rem !important;
+}
+
+/* Exemplo: botão primário roxo */
+.button.primary {
+  background-color: #6a0dad !important;
+  color: #fff !important;
+}
